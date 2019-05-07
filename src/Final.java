@@ -6,22 +6,13 @@ public class Final {
         equinox = new Scanner(System.in);
         String user, comp;
         System.out.println("Welcome to Rock Paper Scissors.\n  ");
-        while(true){
-            
+        while(true) {
+            String[] wordArray = {"Rock", "Paper", "Scissors"};
 
-
-
-
-
-
-
+            int number = (int)(Math.random()*100);
 
 
         }
-
-
-
-
 
 
 
