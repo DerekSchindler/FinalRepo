@@ -5,6 +5,7 @@ public class Final {
         Scanner equinox;
         equinox = new Scanner(System.in);
         String user, comp;
+        int victory; int compScore=0; int userScore=0;
         System.out.println("Welcome to Rock Paper Scissors.\n  ");
         while(true) {
             String[] wordArray = {"Rock", "Paper", "Scissors"};
@@ -14,7 +15,15 @@ public class Final {
            user=equinox.nextLine();
            user=user.toUpperCase();
            System.out.println("My play was "+comp+" your play was "+user);
-           outcome(comp, user);
+           victory = outcome(comp, user);
+           if(victory==1){
+               compScore=compScore++;
+           }
+           if(victory==2){
+               userScore=userScore++;
+           }
+           System.out.println("My score is "+compScore+". Your score is "+userScore+".");
+           System.out.println("Lets play again. \n  \n  \n  \n  ");
 
 
         }
@@ -64,11 +73,7 @@ public class Final {
             System.out.println("Scissors beats paper. You win!");
             return 2;
         }
-
-
-
-
-
+        return 0;
     }
 
 }
