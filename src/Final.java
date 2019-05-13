@@ -8,12 +8,11 @@ public class Final {
         int compScore=0; int userScore=0;
         System.out.println("Welcome to Rock Paper Scissors.\n  ");
         while(true) {
-            String[] wordArray = {"Rock", "Paper", "Scissors"};
-            int number = (int)(Math.random()*100);
-           comp = comInput(number);
            System.out.println("I already have my play. Please enter your play.");
            user=equinox.nextLine();
            user=user.toUpperCase();
+            int number = (int)(Math.random()*100);
+           comp=comInput(number);
            System.out.println("My play was "+comp+" your play was "+user);
             if(comp.equals(user)){
                 System.out.println("Its a tie!");
@@ -47,18 +46,17 @@ public class Final {
         }
         }
     public static String comInput(int number){
-
+        String[] wordArray = {"ROCK", "PAPER", "SCISSORS"};
         if(number<34){
-            return "ROCK";
+            return wordArray[0];
         }
-        else if(number>65){
-            return "PAPER";
+        if(number<67){
+            return wordArray[1];
         }
         else{
-            return "SCISSORS";
+            return wordArray[2];
         }
-
     }
-    
+
 
 }
